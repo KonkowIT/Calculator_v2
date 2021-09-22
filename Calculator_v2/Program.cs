@@ -14,6 +14,26 @@ namespace Calculator_v2
     {
         static void Main(string[] args)
         {
+            try
+            {
+                InputConverter inputConverter = new InputConverter();
+                CalculatorEngine calculatorEngine = new CalculatorEngine();
+
+                Console.WriteLine("Provide first number:");
+                double firstInt = inputConverter.ConvertToInt(Console.ReadLine());
+
+                Console.WriteLine("Provide second number:");
+                double secondInt = inputConverter.ConvertToInt(Console.ReadLine());
+
+                Console.WriteLine("Provide operation type:");
+                string operationType = Console.ReadLine();
+
+                double result = calculatorEngine.Calculate(operationType, firstInt, secondInt);
+                Console.WriteLine(result);
+            } catch(Exception ex) {
+                Console.WriteLine("ERROR: {0}", ex.Message);
+            }
+
         }
     }
 }

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddOrSubstract.cs" />
     <Compile Include="CalculatorEngine.cs" />
     <Compile Include="InputConverter.cs" />
     <Compile Include="Program.cs" />

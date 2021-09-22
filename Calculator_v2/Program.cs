@@ -18,6 +18,7 @@ namespace Calculator_v2
             {
                 InputConverter inputConverter = new InputConverter();
                 CalculatorEngine calculatorEngine = new CalculatorEngine();
+                //AddOrSubstract addOrSubstract = new AddOrSubstract();
 
                 Console.WriteLine("Provide first number:");
                 double firstInt = inputConverter.ConvertToInt(Console.ReadLine());
@@ -28,6 +29,7 @@ namespace Calculator_v2
                 Console.WriteLine("Provide operation type:");
                 string operationType = Console.ReadLine();
 
+                //double result = addOrSubstract.Calculate(firstInt, secondInt);
                 double result = calculatorEngine.Calculate(operationType, firstInt, secondInt);
                 Console.WriteLine(result);
             } catch(Exception ex) {
